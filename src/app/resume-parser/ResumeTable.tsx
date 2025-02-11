@@ -63,17 +63,17 @@ export const ResumeTable = ({ resume }: { resume: Resume }) => {
         <TableRow label="Name" value={resume.profile.name} />
         <TableRow label="Email" value={resume.profile.email} />
         <TableRow label="Phone" value={resume.profile.phone} />
-        <TableRow label="Location" value={resume.profile.location} />
-        <TableRow label="Link" value={resume.profile.url} />
+        {/* <TableRow label="Location" value={resume.profile.location} />
+        <TableRow label="Link" value={resume.profile.url} /> */}
         <TableRow label="Summary" value={resume.profile.summary} />
         <TableRowHeader>Education</TableRowHeader>
         {educations.map((education, idx) => (
           <Fragment key={idx}>
             <TableRow label="School" value={education.school} />
             <TableRow label="Degree" value={education.degree} />
-            <TableRow label="GPA" value={education.gpa} />
+            {/* <TableRow label="GPA" value={education.gpa} /> */}
             <TableRow label="Date" value={education.date} />
-            <TableRow
+            {/* <TableRow
               label="Descriptions"
               value={education.descriptions}
               className={
@@ -81,7 +81,7 @@ export const ResumeTable = ({ resume }: { resume: Resume }) => {
                 idx !== educations.length - 1 &&
                 "!border-b-4"
               }
-            />
+            /> */}
           </Fragment>
         ))}
         <TableRowHeader>Work Experience</TableRowHeader>

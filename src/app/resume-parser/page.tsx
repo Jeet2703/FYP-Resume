@@ -24,15 +24,15 @@ const RESUME_EXAMPLES = [
       </span>
     ),
   },
-  {
-    fileUrl: "resume-example/openresume-resume.pdf",
-    description: (
-      <span>
-        Created with OpenResume resume builder -{" "}
-        <Link href="/resume-builder">Link</Link>
-      </span>
-    ),
-  },
+  // {
+  //   fileUrl: "resume-example/unifiedrecruitmenthub-resume.pdf",
+  //   description: (
+  //     <span>
+  //       Created with Unified Recruitment Hub resume builder -{" "}
+  //       <Link href="/resume-builder">Link</Link>
+  //     </span>
+  //   ),
+  // },
 ];
 
 const defaultFileUrl = RESUME_EXAMPLES[0]["fileUrl"];
@@ -65,14 +65,14 @@ export default function ResumeParser() {
         <div className="flex px-6 text-gray-900 md:col-span-3 md:h-[calc(100vh-var(--top-nav-bar-height))] md:overflow-y-scroll">
           <FlexboxSpacer maxWidth={45} className="hidden md:block" />
           <section className="max-w-[600px] grow">
-            <Heading className="text-primary !mt-4">
+            {/* <Heading className="text-primary !mt-4">
               Resume Parser Playground
             </Heading>
             <Paragraph smallMarginTop={true}>
-              This playground showcases the OpenResume resume parser and its
+              This playground showcases the Unified Recruitment Hub resume parser and its
               ability to parse information from a resume PDF. Click around the
               PDF examples below to observe different parsing results.
-            </Paragraph>
+            </Paragraph> */}
             <div className="mt-3 flex gap-3">
               {RESUME_EXAMPLES.map((example, idx) => (
                 <article
@@ -97,7 +97,7 @@ export default function ResumeParser() {
                 </article>
               ))}
             </div>
-            <Paragraph>
+            {/* <Paragraph>
               You can also{" "}
               <span className="font-semibold">add your resume below</span> to
               access how well your resume would be parsed by similar Application
@@ -105,7 +105,7 @@ export default function ResumeParser() {
               information it can parse out, the better it indicates the resume
               is well formatted and easy to read. It is beneficial to have the
               name and email accurately parsed at the very least.
-            </Paragraph>
+            </Paragraph> */}
             <div className="mt-3">
               <ResumeDropzone
                 onFileUrlChange={(fileUrl) =>
@@ -118,11 +118,11 @@ export default function ResumeParser() {
               Resume Parsing Results
             </Heading>
             <ResumeTable resume={resume} />
-            <ResumeParserAlgorithmArticle
+            {/* <ResumeParserAlgorithmArticle
               textItems={textItems}
               lines={lines}
               sections={sections}
-            />
+            /> */}
             <div className="pt-24" />
           </section>
         </div>
